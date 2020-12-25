@@ -35,7 +35,7 @@ public class Gallant {
 
         LiteSQL.connect();
 
-        DefaultShardManagerBuilder builder = DefaultShardManagerBuilder.createDefault(System.getenv("TOKEN"));
+        DefaultShardManagerBuilder builder = DefaultShardManagerBuilder.createDefault("NzkwNTg5NTczNTczOTAyMzY4.X-Cz6g.50ZE86BpEeQYx66bKZkQOXcejP4");
 
         builder.setActivity(Activity.watching("Gallant members"));
         builder.setStatus(OnlineStatus.ONLINE);
