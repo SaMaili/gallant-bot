@@ -29,7 +29,7 @@ public class Gallant {
 
     public Gallant() throws LoginException, IllegalArgumentException {
         //converter File and directories
-        UpdateCommand.converter = new File(System.getProperty("user.home") + "/AsciiToUtf8.js");
+        UpdateCommand.converter = new File("AsciiToUtf8.js");
 
         INSTANCE = this;
 
