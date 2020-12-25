@@ -7,8 +7,10 @@ import net.dv8tion.jda.api.sharding.DefaultShardManagerBuilder;
 import net.dv8tion.jda.api.sharding.ShardManager;
 
 import javax.security.auth.login.LoginException;
-import java.io.*;
-import java.util.stream.Collectors;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Gallant {
 
@@ -26,16 +28,14 @@ public class Gallant {
     }
 
     public Gallant() throws LoginException, IllegalArgumentException {
-            //converter File and directories
-            UpdateCommand.converter = new File(System.getProperty("user.home") + "/AsciiToUtf8.js");
-
-
+        //converter File and directories
+        UpdateCommand.converter = new File(System.getProperty("user.home") + "/AsciiToUtf8.js");
 
         INSTANCE = this;
 
         LiteSQL.connect();
 
-        DefaultShardManagerBuilder builder = DefaultShardManagerBuilder.createDefault("NzkwNTg5NTczNTczOTAyMzY4.X-Cz6g.CfIkSfmiFgry_y8V-AXHRo8wQRg");
+        DefaultShardManagerBuilder builder = DefaultShardManagerBuilder.createDefault(System.getenv("TOKEN"));
 
         builder.setActivity(Activity.watching("Gallant members"));
         builder.setStatus(OnlineStatus.ONLINE);
