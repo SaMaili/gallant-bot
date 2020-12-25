@@ -24,7 +24,7 @@ import static java.lang.Thread.sleep;
 
 public class UpdateCommand implements ServerCommand {
 
-    final public static String API_KEY = "PDAKTGFAGATEPCIR07JDVZI5REI8M";
+    final public static String API_KEY = System.getenv("BH_API_KEY");
     static ScriptEngine engine = new ScriptEngineManager().getEngineByName("JavaScript");
     public static File converter;
 
