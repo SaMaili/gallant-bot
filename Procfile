@@ -1,1 +1,1 @@
-Worker: java src/main/java/Gallant.java
+Worker: java -jar Gallant.jar
